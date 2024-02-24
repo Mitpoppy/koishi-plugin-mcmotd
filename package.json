@@ -1,0 +1,20 @@
+{
+  "name": "koishi-plugin-mcmotd",
+  "description": "我的世界服务器状态查询，做最好用的QQ机器人",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.17.0-beta.4"
+  }
+}
