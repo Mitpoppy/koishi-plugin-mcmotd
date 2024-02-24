@@ -52,13 +52,15 @@ function stripColorCodes(text) {
   return text.replace(/§\w|\u00A7\w/g, '')
 }
 
+function parseServerInput(serverInput: string): { host: string, port: string } {
+  const [host, port] = serverInput.split(':')
+  return { host, port }
+}
+
 export function apply(ctx: Context) {
   ctx.command('motd <server>', '查询我的世界服务器状态', { authority: 1 })
     .action(async ({ session }, server) => {
-      let [host, port] = server.split(':')
-      if (!port) {
-        port = host.includes('.') ? '19132' : '25565'
-      }
+      const { host, port } = parseServerInput(server)
       try {
         const data = await getServerStatus(host, port) as ServerStatusData
         const translatedKeys = {
