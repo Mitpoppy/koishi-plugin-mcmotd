@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-mcmotd",
   "description": "我的世界服务器状态查询，做最好用的QQ机器人",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "contributors": [
     "Mitpoppy <2974560682@qq.com>"
   ],
